@@ -9,37 +9,19 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  SafeAreaView
 } from 'react-native';
 import Picker from './src/picker'
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-
-        <View style={{ flex: 1 }} />
-        {/* <Picker items = {["1", "2", "3", "4", "5","6", "7", "8", "9", "0", "1", "2", "3","4", "5", "6", "7", "8", "9", "0", "1","2", "3", "4", "5", "6", "7", "8", "9","0", "1", "2", "3",]}/> */}
-        <Picker items={["1", "2", "3", "4", "2", "3", "4"]} />
-        <View style={{ paddingBottom: 10 }} />
-      </View>
+      <SafeAreaView style={styles.container}>
+        <View style={{ flex: 5}} />
+        <Picker items={["1123121123121", "1", "5", "^","112312", " 2", "1", "112312112312112312112312112312112312112312112312112312112312","1123121123121", "1", "5", "^","112312", " 2", "1", "112312112312112312112312112312112312112312112312112312112312","1123121123121", "1", "5", "^","112312", " 2", "1", "112312112312112312112312112312112312112312112312112312112312","1123121123121", "1", "5", "^","112312", " 2", "1", "112312112312112312112312112312112312112312112312112312112312","1123121123121", "1", "5", "^","112312", " 2", "1", "112312112312112312112312112312112312112312112312112312112312","1123121123121", "1", "5", "^","112312", " 2", "1", "112312112312112312112312112312112312112312112312112312112312","1123121123121", "1", "5", "^","112312", " 2", "1", "112312112312112312112312112312112312112312112312112312112312",]} />
+        <View style={{ flex: 3 }} />
+      </SafeAreaView>
     );
   }
 }

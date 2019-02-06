@@ -34,8 +34,11 @@ export default class App extends Component {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+
+        <View style={{ flex: 1 }} />
         {/* <Picker items = {["1", "2", "3", "4", "5","6", "7", "8", "9", "0", "1", "2", "3","4", "5", "6", "7", "8", "9", "0", "1","2", "3", "4", "5", "6", "7", "8", "9","0", "1", "2", "3",]}/> */}
-        <Picker items = {["1", "2", "3", "4",]}/>
+        <Picker items={["1", "2", "3", "4", "2", "3", "4"]} />
+        <View style={{ paddingBottom: 10 }} />
       </View>
     );
   }

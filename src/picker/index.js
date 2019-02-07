@@ -1,3 +1,3 @@
-import Picker from './picker.component';
+import Picker from './picker.ios.component';
 
 export default Picker;

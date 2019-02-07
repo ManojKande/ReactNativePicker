@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TouchableWithoutFeedback, Dimensions } from 'react-native';
-import ImgDropDownArrow from '../assets/images/drop-down-arrow.png'
+import ImgDropdownArrow from '../assets/images/drop-down-arrow.png'
 
 const { width, height } = Dimensions.get('window');
 
@@ -8,7 +8,7 @@ export default class Picker extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showDropDown: false,
+            showDropdown: false,
             layout: {},
             selectedValue: "this is our picker bro",
             itemHeight: null,
@@ -28,10 +28,10 @@ export default class Picker extends Component {
 
     updateId = (id) => {
         if (id > -1) {
-            this.setState({ selectedValue: this.props.items[id], showDropDown: false })
+            this.setState({ selectedValue: this.props.items[id], showDropdown: false })
         }
         else {
-            this.setState({ showDropDown: false })
+            this.setState({ showDropdown: false })
         }
     }
 
@@ -71,12 +71,12 @@ export default class Picker extends Component {
         return (
             <View style={[styles.pickerView, this.props.pickerStyle && this.props.pickerStyle]}
                 onLayout={this.pickerViewOnLayout}  >
-                <TouchableOpacity style={styles.innerView} onPress={() => { this.setState({ showDropDown: true }) }}>
+                <TouchableOpacity style={styles.innerView} onPress={() => { this.setState({ showDropdown: true }) }}>
                     <Text numberOfLines={1} style={{ flex: 1 }} >{this.state.selectedValue}</Text>
-                    <Image source={ImgDropDownArrow} style={{ height: 15, width: 15, resizeMode: 'contain' }} />
+                    <Image source={ImgDropdownArrow} style={{ height: 15, width: 15, resizeMode: 'contain' }} />
                 </TouchableOpacity>
                 {
-                    this.state.showDropDown &&
+                    this.state.showDropdown &&
                     <TouchableOpacity
                         style={{
                             position: 'absolute',
